@@ -1,0 +1,39 @@
+#table{
+	width: 100%;
+	margin-top: 5%;
+}
+#filter_create{
+	width: 180px;
+	height: 55px;
+	margin: -2px;
+	background: #C1AA6E;
+	margin-left: 29%;
+	margin-top: 3%;
+}
+#filter_create p{
+	width: 110px;
+	height: 27px;
+	font-size: 27px;
+	color: #000000;
+}
+#pages{
+	background: transparent;
+	height: 50px;
+	width: 1140px;
+	margin-top: 3%;
+}
+#page_num{
+	width: 50px;
+	background: #C1AA6E;
+	margin: -1px;
+	border-radius: 25px;
+	height: 50px;
+	margin-right: 20px;
+}
+#page_num p{
+	width: 10px;
+	height: 30px;
+	font-size: 20px;
+	color: #000000;
+	margin-top: 10px;
+}

@@ -1,0 +1,44 @@
+body{
+	margin: 0px;
+}
+#app{
+	width: 1140px;
+	height: 100%;
+	color: #F2FFD8;
+	border-color: #000000;
+	background: #F2FFD8;
+	margin-left: auto;
+	margin-top: opx;
+	margin-right: auto;
+}
+#button{
+	width: 380px;
+	height: 85px;
+	background: #C1AA6E;
+	margin-left: 11%;
+	margin-top: 3%
+}
+#button p{
+	width: 315px;
+	height: 27px;
+	font-size: 27px;
+	padding-top: 18px;
+	color: #000000;
+}
+#text{
+	color: #000000;
+	font-size: 27px;
+	margin-left: 2%;
+}
+#filters{
+	border-bottom: 1px solid #000000;
+	border-top: 1px solid #000000;
+}
+#filters input{
+	height: 27px;
+	margin-top: 4%;
+}
+#filters select{
+	height: 27px;
+	margin-top: 4%;
+}
