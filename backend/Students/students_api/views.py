@@ -32,17 +32,24 @@ def student_list_update(request):
         student = Students.objects.get(id=request.data['id'])
         print(student)
         try:
-            student.name = request.data['name']
-            student.stud_date = request.data['stud_date']
-            student.stud_group = request.data['stud_group']
-            student.cours = request.data['cours']
-            if request.data['individual'] == 'true':
-                student.individual = True
+            if request.data['name'] == '':
+                student.delete()
+                return Response('Deleted')
             else:
-                student.individual = False
-            student.photography = request.data['photography']
-            student.save()
-            return Response('Sucessful!!!')
+                student.name = request.data['name']
+                student.stud_date = request.data['stud_date']
+                student.stud_group = request.data['stud_group']
+                student.cours = request.data['cours']
+                if request.data['individual'] == 'true':
+                    student.individual = True
+                else:
+                    student.individual = False
+                if request.data['photography'] != 'undefined':
+                    student.photography = request.data['photography']
+                else:
+                    student.photography = student.photography
+                student.save()
+                return Response('Sucessful!!!')
         except Exception as e:
             return Response(e)
 

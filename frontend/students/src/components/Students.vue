@@ -129,11 +129,11 @@
 			filterInformation(table, type){
 				if (type == 'name'){
 					this.filterName(table);
-				}
-				else if (type == 'indiv'){
+				};
+				if (type == 'indiv'){
 					this.filterIndividual(table);
-				}
-				else if (type == 'cours'){
+				};
+				if (type == 'cours'){
 					this.filterCours(table);
 				};
 				this.createSubArrays(this.table);
@@ -184,12 +184,14 @@
 						};
 						this.last_indiv = this.individual;//Сохраняем что последний фильтр по инивидуальному плану 'false'
 					};
+					/*
 					if(this.name != ''){
 						this.filterName(this.table);
 						};
-						if(this.cours != ''){
-							this.filterCours(this.table);
-						};
+					if(this.cours != ''){
+						this.filterCours(this.table);
+					};
+					*/
 				}
 				else{//Иначе мы очищаем фильтр, если другие фильтры не пустые, то применяем их
 					this.clearFilter();
@@ -211,6 +213,7 @@
 							this.table.push(reserv[i]);
 						};
 					};
+					/*
 					if(this.name != ''){//Если значение фильтра имени не пустое
 						//Применяем фильтр по имени
 						this.filterName(this.table);
@@ -218,7 +221,7 @@
 					if(this.individual != 'null'){//Если значение фильтра по индивидуальному плану не пустое
 					//Применяем фильтр по индивидуальному плану
 						this.filterIndividual(this.table);
-					};
+					};*/
 				}
 				else{//Иначе очищаем фильтр, если другие не пустые, то применяем их
 					this.clearFilter();
