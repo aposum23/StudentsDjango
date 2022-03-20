@@ -90,28 +90,6 @@
 					axios.get('http://127.0.0.1:8000/student-sections').then(response => (this.table_inform = response.data));
 				}
 			},
-			filterName(){
-				if (this.name != ''){//Если значение имени не пустое выполняем следующее
-					this.table = [];//Обнуляем основную таблицу
-					var leng = this.reserv_table.length;
-					for (let i = 0; i < leng; i++){//Цикл в котором проходит поиск подстроки в строке алгоритмом Бойера-Мура
-						var res = boyer(this.reserv_table[i]['student']['name'], this.name);//Вызов алгоритма Бойера-Мура
-						if (res.length > 0){//Если алгоритм вернул не пустой массив, то выполняем следующее
-							this.table.push(this.reserv_table[i]);//Иначе заносим в таблицу
-						};
-					};
-					this.createSubArrays(this.table);
-
-				}
-				else{//Если значение имени студента пустое, очищаем фильтры и применяем другие, если значения тех не пустые
-					this.clearFilter();
-				};
-			},
-			clearFilter(){
-				//this.table_inform = this.reserv_table;//Основной таблице передаём значения резервной
-				this.table_inform = [];
-				this.createSubArrays(this.reserv_table);
-			},
 			mainArraysSet(array){
 				this.reserv_table= array;
 				this.table_inform = [];

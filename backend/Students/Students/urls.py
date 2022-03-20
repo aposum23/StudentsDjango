@@ -24,4 +24,6 @@ urlpatterns = [
     path('sections', students_api.views.sections_list),
     path('student-sections', students_api.views.student_sections_list),
     path('update-students', students_api.views.student_list_update),
+    path('filter-students',students_api.views.filter_students),
+    path('sort-students',students_api.views.sort_students),
 ]

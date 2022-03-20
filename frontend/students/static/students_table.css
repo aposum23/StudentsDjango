@@ -24,6 +24,19 @@
 	color: #000000;
 	padding-top: 5px;
 }
+#filter_sort_but{
+	width: 320px;
+	height: 55px;
+	background: #C1AA6E;
+	margin-top: 5%;
+}
+#filter_sort_button{
+	width: 300px;
+	height: 20px;
+	font-size: 27px;
+	color: #000000;
+	padding-top: 5px;
+}
 #pages{
 	background: transparent;
 	height: 50px;
